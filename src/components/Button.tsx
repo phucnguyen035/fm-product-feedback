@@ -1,18 +1,13 @@
 import clsx from 'clsx';
-import { ButtonHTMLAttributes, PropsWithChildren, ReactNode, useMemo } from 'react';
+import { ButtonHTMLAttributes, ReactNode, useMemo } from 'react';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'pink' | 'blue' | 'navy' | 'red';
   prependIcon?: ReactNode;
+  children: ReactNode;
 };
 
-export default function Button({
-  variant,
-  prependIcon,
-  children,
-  className,
-  ...rest
-}: PropsWithChildren<Props>) {
+export default function Button({ variant, prependIcon, children, className, ...rest }: Props) {
   const background = useMemo(() => {
     switch (variant) {
       case 'pink':
