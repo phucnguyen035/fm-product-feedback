@@ -1,12 +1,13 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
   meta: ReactNode;
+  children: ReactNode;
 };
 
-export default function Main({ meta, children }: PropsWithChildren<Props>) {
+export default function Main({ meta, children }: Props) {
   return (
-    <div className="w-full px-1 antialiased">
+    <div className="w-full antialiased">
       {meta}
 
       <header></header>
