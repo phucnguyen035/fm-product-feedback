@@ -1,7 +1,13 @@
+import Image from 'next/image';
+
+import ButtonAddFeedback from '@/components/ButtonAddFeedback';
 import Meta from '@/components/Meta';
+import Wrapper from '@/components/Wrapper';
 import Main from '@/layout/Main';
 
-const Index = () => {
+import Empty from '../assets/suggestions/illustration-empty.svg';
+
+export default function IndexPage() {
   return (
     <Main
       meta={
@@ -11,9 +17,25 @@ const Index = () => {
         />
       }
     >
-      <h1 className="text-h1">Hello world</h1>
+      <Wrapper className="grid h-full place-items-center">
+        <div className="space-y-12 text-center">
+          <div>
+            <Image src={Empty} alt="Empty feedback" />
+          </div>
+
+          <div>
+            <h2 className="mb-4 text-h1 font-bold text-navy">There is no feedback yet.</h2>
+            <p className="text-navy-light">
+              Got a suggestion? Found a bug that needs to be squashed? <br /> We love hearing about
+              new ideas to improve our app.
+            </p>
+          </div>
+
+          <div>
+            <ButtonAddFeedback />
+          </div>
+        </div>
+      </Wrapper>
     </Main>
   );
-};
-
-export default Index;
+}
