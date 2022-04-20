@@ -13,19 +13,17 @@ type Props = {
 export default function Dropdown({ options, label, selected, onSelected }: Props) {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md border bg-navy py-6 px-4 text-sm text-gray-light focus:outline-none focus:ring-2 focus:ring-navy">
-          {({ open }) => (
-            <>
-              {label}
-              <ChevronDownIcon
-                className={clsx('-mr-1 ml-2 h-5 w-5 transition-transform', open && 'rotate-180')}
-                aria-hidden="true"
-              />
-            </>
-          )}
-        </Menu.Button>
-      </div>
+      <Menu.Button className="inline-flex w-full justify-center rounded-md bg-navy py-6 px-4 text-sm text-gray-light">
+        {({ open }) => (
+          <>
+            {label}
+            <ChevronDownIcon
+              className={clsx('-mr-1 ml-2 h-5 w-5 transition-transform', open && 'rotate-180')}
+              aria-hidden="true"
+            />
+          </>
+        )}
+      </Menu.Button>
 
       <Transition
         as={Fragment}

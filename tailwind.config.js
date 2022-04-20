@@ -6,6 +6,7 @@ module.exports = {
 
   theme: {
     colors: {
+      black: '#000000',
       pink: '#AD1FEA',
       blue: '#4661E6',
       sky: '#62BCFA',
@@ -34,6 +35,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Jost', ...defaultTheme.fontFamily.sans],
+      },
+      spacing: {
+        18: '4.5rem',
       },
     },
   },
