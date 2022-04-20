@@ -29,15 +29,15 @@ export default function Button({ variant, prependIcon, children, className, ...r
   return (
     <button
       className={clsx(
-        'w-40 rounded-lg py-2 text-sm font-bold outline-none transition-colors',
+        'w-36 rounded-lg py-2.5 px-4 text-body3 font-bold outline-none transition-colors md:w-40 md:text-sm',
         background,
         textColor,
         className,
       )}
       {...rest}
     >
-      <div className="flex justify-center">
-        {prependIcon && <span className="mr-3.5 h-5 w-5">{prependIcon}</span>}
+      <div className="flex items-center justify-center">
+        {prependIcon && <span className="mr-1 h-4 w-4 md:mr-3.5 md:h-5 md:w-5">{prependIcon}</span>}
         {children}
       </div>
     </button>
