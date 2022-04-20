@@ -4,6 +4,10 @@
 
 
 @layer base {
+  :root {
+    --header-height: theme('spacing.18');
+  }
+
   body {
     @apply text-body1;
   }
