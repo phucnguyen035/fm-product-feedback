@@ -4,7 +4,7 @@ on:
   deployment_status:
 
 jobs:
-  test:
+  Test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
@@ -13,7 +13,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16.x
-        cache: yarn
+        # cache: yarn
     - name: Install dependencies
       run: yarn install --frozen-lockfile
     - name: Install Playwright
