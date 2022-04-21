@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ReactNode, useMemo, useState } from 'react';
 
 import SuggestionIcon from '@/assets/suggestions/icon-suggestions.svg';
@@ -50,7 +49,7 @@ export default function Main({ meta, children }: Props) {
         <div className="flex items-center justify-between bg-navy pr-6 md:rounded-xl md:pl-6 md:pr-4">
           <div className="flex">
             <div className="hidden md:mr-10 md:flex md:items-center">
-              <Image src={SuggestionIcon} alt="suggestion icon" />
+              <SuggestionIcon />
               <span className="ml-4 text-h3  font-bold text-white">0 Suggestions</span>
             </div>
 

@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import ButtonAddFeedback from '@/components/ButtonAddFeedback';
 import Meta from '@/components/Meta';
 import Wrapper from '@/components/Wrapper';
@@ -19,8 +17,8 @@ export default function IndexPage() {
     >
       <Wrapper className="grid h-full place-items-center">
         <div className="space-y-12 text-center">
-          <div>
-            <Image src={Empty} alt="Empty feedback" />
+          <div className="flex justify-center">
+            <Empty />
           </div>
 
           <div>

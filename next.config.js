@@ -15,4 +15,13 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   // TODO: Enable again once headlessui has updated
   reactStrictMode: false,
+  webpack(config) {
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: require.resolve('@svgr/webpack'),
+    });
+    return config;
+  },
 });
