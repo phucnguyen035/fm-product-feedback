@@ -18,7 +18,11 @@ export default function HeaderMobile() {
         </div>
 
         <div>
-          <button className="h-6 w-6 text-white" onClick={() => setOpen((val) => !val)}>
+          <button
+            aria-label={open ? 'Close icon' : 'Menu icon'}
+            className="h-6 w-6 text-white"
+            onClick={() => setOpen((val) => !val)}
+          >
             {open ? <XIcon /> : <MenuIcon />}
           </button>
         </div>
