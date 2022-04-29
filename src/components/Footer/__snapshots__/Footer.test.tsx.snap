@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<div>
+  <footer
+    class="py-4 text-center"
+  >
+    Built with ♥ by
+     
+    <a
+      class="font-semibold text-blue hover:underline"
+      href="https://github.com/phucnguyen035"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Phuc Nguyen
+    </a>
+  </footer>
+</div>
+`;

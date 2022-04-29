@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Add Feedback should render correctly 1`] = `
+<div>
+  <a
+    href="/feedback/add"
+  >
+    <button
+      class="w-36 rounded-lg py-2.5 px-4 text-body3 font-bold outline-none transition-colors md:w-40 md:text-sm bg-pink hover:bg-pink/80 focus:outline-pink/80 text-gray-light no-underline"
+    >
+      <div
+        class="flex items-center justify-center"
+      >
+        <span
+          aria-label="icon left"
+          class="mr-1 h-4 w-4 md:mr-3.5 md:h-5 md:w-5"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </span>
+        Add feedback
+      </div>
+    </button>
+  </a>
+</div>
+`;
