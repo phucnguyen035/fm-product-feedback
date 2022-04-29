@@ -7,7 +7,7 @@ test('Home page should have initial text', async ({ page }) => {
 
 test('Can add feedback', async ({ page }) => {
   await page.goto('./');
-  await page.click('data-testid=add-feedback');
+  await page.locator('button', { hasText: 'Add feedback' }).first().click();
 
   await expect(page).toHaveURL('/feedback/add/');
 });
