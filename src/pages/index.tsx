@@ -1,4 +1,6 @@
-import ButtonAddFeedback from '@/components/ButtonAddFeedback';
+import { GetServerSideProps } from 'next';
+
+import { ButtonAddFeedback } from '@/components/ButtonAddFeedback';
 import Meta from '@/components/Meta';
 import Wrapper from '@/components/Wrapper';
 import Main from '@/layout/Main';
@@ -37,3 +39,9 @@ export default function IndexPage() {
     </Main>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};
