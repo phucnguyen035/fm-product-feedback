@@ -6,10 +6,7 @@ on:
 
 jobs:
   build-and-test:
-<<<<<<< HEAD
     name: Build and run unit tests
-=======
->>>>>>> 1d17ca5 (ci: add unit test workflow)
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
