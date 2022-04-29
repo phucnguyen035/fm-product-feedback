@@ -5,6 +5,7 @@ on:
 
 jobs:
   Test:
+    name: Run e2e tests on ${{ github.event.deployment_status.target_url }}
     timeout-minutes: 60
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
