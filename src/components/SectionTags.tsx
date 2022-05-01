@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Tag from './Tag';
+import { Tag } from './Tag';
 import { Wrapper } from './Wrapper';
 
 const mock = ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'];
