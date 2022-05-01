@@ -17,7 +17,7 @@ export default function Upvote({ value, active = false, disabled = false, onClic
 
   return (
     <button
-      aria-label="Upvote button"
+      aria-label="upvote"
       type="button"
       disabled={disabled}
       className={clsx(
@@ -26,7 +26,7 @@ export default function Upvote({ value, active = false, disabled = false, onClic
       )}
       onClick={onClick}
     >
-      <ChevronUpIcon className={clsx('w-4')} />
+      <ChevronUpIcon className="w-4" />
       <span className={clsx(!active && 'text-navy-light')}>{value}</span>
     </button>
   );
