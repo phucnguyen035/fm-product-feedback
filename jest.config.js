@@ -21,5 +21,16 @@ const customJestConfig = {
   collectCoverageFrom: ['./src/**', '!src/pages/**/*.tsx', '!src/**/__snapshots__/*'],
 };
 
+const jestConfig = async () => {
+  const nextJestConfig = await createJestConfig(customJestConfig)();
+  return {
+    ...nextJestConfig,
+    moduleNameMapper: {
+      '\\.svg': '<rootDir>/__mocks__/svg.js',
+      ...nextJestConfig.moduleNameMapper,
+    },
+  };
+};
+
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig);
+module.exports = jestConfig;
