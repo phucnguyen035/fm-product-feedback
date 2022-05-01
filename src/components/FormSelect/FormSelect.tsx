@@ -12,7 +12,10 @@ type Props = {
 };
 
 export default function FormSelect({ value, label, options, description, onSelect }: Props) {
-  const selectedLabel = useMemo(() => options.find((o) => o.value === value)?.label ?? '', []);
+  const selectedLabel = useMemo(
+    () => options.find((o) => o.value === value)?.label ?? 'Invalid option',
+    [],
+  );
 
   return (
     <Listbox value={value} onChange={onSelect}>
@@ -55,7 +58,9 @@ export default function FormSelect({ value, label, options, description, onSelec
                     {({ selected }) => (
                       <div className="flex items-center justify-between">
                         <span className="block truncate">{option.label}</span>
-                        {selected && <CheckIcon className="h-5 w-5 text-pink" aria-hidden="true" />}
+                        {selected && (
+                          <CheckIcon data-testid="check icon" className="h-5 w-5 text-pink" />
+                        )}
                       </div>
                     )}
                   </Listbox.Option>

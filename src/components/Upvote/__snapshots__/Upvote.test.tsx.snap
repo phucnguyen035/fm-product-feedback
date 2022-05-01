@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Upvote /> should have correct class for active state 1`] = `
+<div>
+  <button
+    aria-label="upvote"
+    class="inline-block rounded-lg px-2 py-1.5 text-body3 font-bold transition-colors text-blue bg-gray-light hover:bg-blue/50"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+        fill-rule="evenodd"
+      />
+    </svg>
+    <span
+      class="text-navy-light"
+    >
+      1
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Upvote /> should have correct class for inactive state 1`] = `
+<div>
+  <button
+    aria-label="upvote"
+    class="inline-block rounded-lg px-2 py-1.5 text-body3 font-bold transition-colors bg-blue text-white"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+        fill-rule="evenodd"
+      />
+    </svg>
+    <span
+      class=""
+    >
+      1
+    </span>
+  </button>
+</div>
+`;

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
-import { useCallback } from 'react';
 
-import Wrapper from './Wrapper';
+import { Wrapper } from '../Wrapper';
 
 const roadmap = [
   { key: 'Planned', value: 2 },
@@ -9,24 +8,21 @@ const roadmap = [
   { key: 'Live', value: 1 },
 ];
 
+export const getColor = (item: { key: string; value: number }) => {
+  switch (item.key) {
+    case 'Planned':
+      return 'text-orange';
+    case 'In-progress':
+      return 'text-pink';
+    case 'Live':
+      return 'text-blue';
+
+    default:
+      throw new Error('Unknown key');
+  }
+};
+
 export default function SectionRoadmap() {
-  const getColor = useCallback(
-    (item: { key: string; value: number }) => {
-      switch (item.key) {
-        case 'Planned':
-          return 'text-orange';
-        case 'In-progress':
-          return 'text-pink';
-        case 'Live':
-          return 'text-blue';
-
-        default:
-          return '';
-      }
-    },
-    [roadmap],
-  );
-
   return (
     <Wrapper as="section">
       <div className="mb-6 flex items-end justify-between">

@@ -1,30 +1,22 @@
-import { ReactNode, useMemo, useState } from 'react';
+import { ReactNode } from 'react';
 
 import SuggestionIcon from '@/assets/suggestions/icon-suggestions.svg';
 import { ButtonAddFeedback } from '@/components/ButtonAddFeedback';
-import Dropdown from '@/components/Dropdown';
+import { Dropdown } from '@/components/Dropdown';
 import { Footer } from '@/components/Footer';
-import HeaderMobile from '@/components/HeaderMobile';
-import SectionRoadmap from '@/components/SectionRoadmap';
-import SectionTags from '@/components/SectionTags';
-import WrapperGradient from '@/components/WrapperGradient';
+import { HeaderMobile } from '@/components/HeaderMobile';
+import { SectionRoadmap } from '@/components/SectionRoadmap';
+import { SectionTags } from '@/components/SectionTags';
+import { WrapperGradient } from '@/components/WrapperGradient';
+import { useSortOptions } from '@/hooks/useSortOptions';
 
 type Props = {
   meta: ReactNode;
   children: ReactNode;
 };
 
-const options = [
-  { label: 'Most Upvotes', value: 'upvotes-desc' },
-  { label: 'Least Upvotes', value: 'upvotes-asc' },
-  { label: 'Most Comments', value: 'comments-desc' },
-  { label: 'Least Comments', value: 'comments-asc' },
-];
-
 export default function Main({ meta, children }: Props) {
-  const [value, setValue] = useState('upvotes-desc');
-
-  const selectedLabel = useMemo(() => options.find((o) => o.value === value)?.label ?? '', [value]);
+  const { currentOption, currentLabel, options, setSortOption } = useSortOptions();
 
   return (
     <div className="grid min-h-screen w-full grid-rows-[min-content_auto] bg-gray-light antialiased md:block">
@@ -56,12 +48,12 @@ export default function Main({ meta, children }: Props) {
             <Dropdown
               label={
                 <>
-                  Sort by: &nbsp;<strong> {selectedLabel}</strong>
+                  Sort by: &nbsp;<strong> {currentLabel}</strong>
                 </>
               }
-              selected={value}
+              selected={currentOption}
               options={options}
-              onSelected={(v) => setValue(v)}
+              onSelected={setSortOption}
             />
           </div>
 
