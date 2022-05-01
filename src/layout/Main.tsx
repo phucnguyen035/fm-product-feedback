@@ -4,7 +4,7 @@ import SuggestionIcon from '@/assets/suggestions/icon-suggestions.svg';
 import { ButtonAddFeedback } from '@/components/ButtonAddFeedback';
 import { Dropdown } from '@/components/Dropdown';
 import { Footer } from '@/components/Footer';
-import HeaderMobile from '@/components/HeaderMobile';
+import { HeaderMobile } from '@/components/HeaderMobile';
 import SectionRoadmap from '@/components/SectionRoadmap';
 import SectionTags from '@/components/SectionTags';
 import WrapperGradient from '@/components/WrapperGradient';
