@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WrapperGradient /> should render correctly 1`] = `
+<div>
+  <div
+    class="h-full w-full bg-gradient-to-r from-blue/80 via-pink/80 to-orange/100"
+  >
+    <div
+      data-testid="children"
+    >
+      Hello World
+    </div>
+  </div>
+</div>
+`;
