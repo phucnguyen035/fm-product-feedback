@@ -15,7 +15,7 @@ export default function Tag({ active = false, children, onClick }: Props) {
 
   return (
     <button
-      aria-label="Tag button"
+      aria-label="tag"
       type="button"
       className={clsx(
         'inline-block rounded-xl px-3 py-1 text-body3 font-semibold transition-colors',
