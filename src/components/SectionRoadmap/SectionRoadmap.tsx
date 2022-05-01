@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useCallback } from 'react';
 
-import { Wrapper } from './Wrapper';
+import { Wrapper } from '../Wrapper';
 
 const roadmap = [
   { key: 'Planned', value: 2 },

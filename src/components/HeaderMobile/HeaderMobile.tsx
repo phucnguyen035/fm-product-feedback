@@ -2,7 +2,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { Fragment, useState } from 'react';
 
-import SectionRoadmap from '../SectionRoadmap';
+import { SectionRoadmap } from '../SectionRoadmap';
 import { SectionTags } from '../SectionTags';
 import { WrapperGradient } from '../WrapperGradient';
 
