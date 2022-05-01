@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { HeaderMobile } from '@/components/HeaderMobile';
 import SectionRoadmap from '@/components/SectionRoadmap';
 import SectionTags from '@/components/SectionTags';
-import WrapperGradient from '@/components/WrapperGradient';
+import { WrapperGradient } from '@/components/WrapperGradient';
 
 type Props = {
   meta: ReactNode;

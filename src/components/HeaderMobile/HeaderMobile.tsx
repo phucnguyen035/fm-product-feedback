@@ -4,7 +4,7 @@ import { Fragment, useState } from 'react';
 
 import SectionRoadmap from '../SectionRoadmap';
 import SectionTags from '../SectionTags';
-import WrapperGradient from '../WrapperGradient';
+import { WrapperGradient } from '../WrapperGradient';
 
 export default function HeaderMobile() {
   const [open, setOpen] = useState(false);
