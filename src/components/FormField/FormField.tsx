@@ -34,7 +34,11 @@ export default function FormField({
         {...rest}
       />
 
-      {error && errorMsg && <p className="mt-1 text-sm text-red">{errorMsg}</p>}
+      {error && errorMsg && (
+        <p id={rest['aria-errormessage']} className="mt-1 text-sm text-red">
+          {errorMsg}
+        </p>
+      )}
     </div>
   );
 }
