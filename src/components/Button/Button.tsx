@@ -38,7 +38,7 @@ export default function Button({ variant, prependIcon, children, className, ...r
     >
       <div className="flex items-center justify-center">
         {prependIcon && (
-          <span aria-label="icon left" className="mr-1 h-4 w-4 md:mr-3.5 md:h-5 md:w-5">
+          <span aria-hidden className="mr-1 h-4 w-4 md:mr-3.5 md:h-5 md:w-5">
             {prependIcon}
           </span>
         )}

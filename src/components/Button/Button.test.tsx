@@ -14,7 +14,7 @@ describe('Button', () => {
   test('should render with prepend icon correctly', () => {
     render(<Button prependIcon={<span>Prepend icon</span>}>{TEXT}</Button>);
 
-    expect(screen.getByLabelText('icon left')).toBeInTheDocument();
+    expect(screen.getByText('Prepend icon')).toBeInTheDocument();
   });
 
   describe('Button variant', () => {

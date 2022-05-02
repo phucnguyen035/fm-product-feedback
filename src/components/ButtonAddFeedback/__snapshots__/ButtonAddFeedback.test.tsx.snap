@@ -12,7 +12,7 @@ exports[`Button Add Feedback should render correctly 1`] = `
         class="flex items-center justify-center"
       >
         <span
-          aria-label="icon left"
+          aria-hidden="true"
           class="mr-1 h-4 w-4 md:mr-3.5 md:h-5 md:w-5"
         >
           <svg
