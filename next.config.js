@@ -15,6 +15,9 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   // TODO: Enable again once headlessui has updated
   reactStrictMode: false,
+  // TODO: Enable again when fixed https://github.com/vercel/next.js/issues/36498
+  optimizeFonts: false,
+
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
     fileLoaderRule.exclude = /\.svg$/;
