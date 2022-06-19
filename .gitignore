@@ -33,3 +33,6 @@ local
 
 # vercel
 .vercel
+
+.blitz**
+blitz-log.log
