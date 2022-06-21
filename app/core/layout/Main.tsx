@@ -1,14 +1,13 @@
+import SuggestionIcon from 'app/core/assets/suggestions/icon-suggestions.svg';
+import { ButtonAddFeedback } from 'app/core/components/ButtonAddFeedback';
+import { Dropdown } from 'app/core/components/Dropdown';
+import { Footer } from 'app/core/components/Footer';
+import { HeaderMobile } from 'app/core/components/HeaderMobile';
+import { SectionRoadmap } from 'app/core/components/SectionRoadmap';
+import { SectionTags } from 'app/core/components/SectionTags';
+import { WrapperGradient } from 'app/core/components/WrapperGradient';
+import { useSortOptions } from 'app/core/hooks/useSortOptions';
 import { ReactNode } from 'react';
-
-import SuggestionIcon from '@/assets/suggestions/icon-suggestions.svg';
-import { ButtonAddFeedback } from '@/components/ButtonAddFeedback';
-import { Dropdown } from '@/components/Dropdown';
-import { Footer } from '@/components/Footer';
-import { HeaderMobile } from '@/components/HeaderMobile';
-import { SectionRoadmap } from '@/components/SectionRoadmap';
-import { SectionTags } from '@/components/SectionTags';
-import { WrapperGradient } from '@/components/WrapperGradient';
-import { useSortOptions } from '@/hooks/useSortOptions';
 
 type Props = {
   meta: ReactNode;

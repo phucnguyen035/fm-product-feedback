@@ -1,9 +1,7 @@
-import { render } from '@testing-library/react';
+import { render } from 'test/utils';
 
 import { Meta } from '.';
 
-// eslint-disable-next-line global-require
-jest.mock('next/dist/client/router', () => require('next-router-mock'));
 jest.mock('next/head', () => ({
   __esModule: true,
   default: ({ children }: { children: Array<React.ReactElement> }) => {
@@ -11,7 +9,7 @@ jest.mock('next/head', () => ({
   },
 }));
 
-describe('Meta', () => {
+describe('<Meta />', () => {
   it('should inject title all meta tags to document', async () => {
     const title = 'Title';
     const description = 'description';
@@ -22,7 +20,11 @@ describe('Meta', () => {
     });
 
     expect(document.title).toBe(title);
-    expect(document.querySelector(`meta[name="${description}"]`)).toBeDefined();
-    expect(document.querySelector(`link[rel="canonical"]`)).toBeDefined();
+    expect(document.querySelector<HTMLMetaElement>(`meta[name="description"]`)?.content).toBe(
+      description,
+    );
+    expect(document.querySelector<HTMLLinkElement>(`link[rel="canonical"]`)?.href).toContain(
+      canonical,
+    );
   });
 });

@@ -1,13 +1,11 @@
-import { GetServerSideProps } from 'next';
+import { ButtonAddFeedback } from 'app/core/components/ButtonAddFeedback';
+import { Meta } from 'app/core/components/Meta';
+import { Wrapper } from 'app/core/components/Wrapper';
+import Main from 'app/core/layout/Main';
+import Empty from 'assets/suggestions/illustration-empty.svg';
+import { BlitzPage } from 'blitz';
 
-import { ButtonAddFeedback } from '@/components/ButtonAddFeedback';
-import { Meta } from '@/components/Meta';
-import { Wrapper } from '@/components/Wrapper';
-import Main from '@/layout/Main';
-
-import Empty from '../assets/suggestions/illustration-empty.svg';
-
-export default function IndexPage() {
+const IndexPage: BlitzPage = () => {
   return (
     <Main
       meta={
@@ -38,10 +36,6 @@ export default function IndexPage() {
       </Wrapper>
     </Main>
   );
-}
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    props: {},
-  };
 };
+
+export default IndexPage;
