@@ -1,4 +1,3 @@
-import SuggestionIcon from 'app/core/assets/suggestions/icon-suggestions.svg';
 import { ButtonAddFeedback } from 'app/core/components/ButtonAddFeedback';
 import { Dropdown } from 'app/core/components/Dropdown';
 import { Footer } from 'app/core/components/Footer';
@@ -7,6 +6,7 @@ import { SectionRoadmap } from 'app/core/components/SectionRoadmap';
 import { SectionTags } from 'app/core/components/SectionTags';
 import { WrapperGradient } from 'app/core/components/WrapperGradient';
 import { useSortOptions } from 'app/core/hooks/useSortOptions';
+import SuggestionIcon from 'assets/suggestions/icon-suggestions.svg';
 import { ReactNode } from 'react';
 
 type Props = {
