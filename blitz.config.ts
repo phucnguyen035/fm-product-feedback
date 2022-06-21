@@ -1,9 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+import { BlitzConfig } from 'blitz';
 
-module.exports = withBundleAnalyzer({
+const blitzConfig: BlitzConfig = {
   eslint: {
     dirs: ['.'],
   },
@@ -18,8 +15,10 @@ module.exports = withBundleAnalyzer({
   // TODO: Enable again when fixed https://github.com/vercel/next.js/issues/36498
   optimizeFonts: false,
 
-  webpack(config) {
-    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+  webpack(config: any) {
+    const fileLoaderRule = config.module.rules.find(
+      (rule: any) => rule.test && rule.test.test('.svg'),
+    );
     fileLoaderRule.exclude = /\.svg$/;
     config.module.rules.push({
       test: /\.svg$/,
@@ -27,4 +26,6 @@ module.exports = withBundleAnalyzer({
     });
     return config;
   },
-});
+};
+
+export default blitzConfig;

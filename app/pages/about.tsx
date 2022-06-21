@@ -1,5 +1,5 @@
-import { Meta } from '@/components/Meta';
-import Main from '@/layout/Main';
+import { Meta } from 'app/core/components/Meta';
+import Main from 'app/core/layout/Main';
 
 const About = () => (
   <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
